@@ -10,6 +10,10 @@
 #'   
 #' @return ggplot object
 
+library(ggplot2)
+library(lubridate)
+library(RColorBrewer)
+
 #==================================================================================================
 
 calendarHeatMap <- function(dates, values, title = "", subtitle = "", legendtitle = ""){

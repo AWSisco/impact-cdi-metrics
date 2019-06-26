@@ -1,5 +1,7 @@
 # Function to calculate the mean daily page views each month
 
+library(ggplot2)
+
 #==================================================================================================
 
 meanDailyPlot <- function(cdi_df){

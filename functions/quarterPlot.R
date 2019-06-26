@@ -1,5 +1,8 @@
 # Function to plot the page views by quarter
 
+library(ggplot2)
+library(dplyr)
+
 #==================================================================================================
 
 quarterPlot <- function(cdi_df){

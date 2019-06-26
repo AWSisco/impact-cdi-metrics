@@ -4,14 +4,8 @@ source("functions/cumulativePlot.R")
 source("functions/meanDailyPlot.R")
 source("functions/calendarHeatMap.R")
 source("functions/quarterPlot.R")
-
-library(ggplot2)
-library(lubridate)
-library(zoo)
-library(ggplot2)
-library(plyr)
-library(RColorBrewer)
-library(dplyr)
+source("functions/gpPortfolioPlot.R")
+source("functions/gpThemePlot.R")
 
 #==================================================================================================
 # GET THE DATA
@@ -50,3 +44,21 @@ quarterPlot(cdi_df)
 
 ggsave(filename = "quarterPlot.png", path = "figures", plot = last_plot(),
        dpi = 300, width = 11.5, height = 3.25, units = "in")
+
+#==================================================================================================
+# GEOPLATFORM PORTFOLIO PLOT
+
+geo_port <- gpPortfolioPlot()
+
+png("figures/gpPortfolioPlot.png", width = 2400, height = 1600, res = 300)
+grid.draw(geo_port)
+dev.off()
+
+#==================================================================================================
+# GEOPLATFORM THEME PLOT
+
+geo_theme <- gpThemePlot()
+
+png("figures/gpThemePlot.png", width = 4000, height = 2000, res = 300)
+grid.draw(geo_theme)
+dev.off()

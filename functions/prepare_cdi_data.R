@@ -1,5 +1,8 @@
 # Function to return all the page view data in a data frame
 
+library(zoo)
+library(lubridate)
+
 #==================================================================================================
 
 prepare_cdi_data <- function(){

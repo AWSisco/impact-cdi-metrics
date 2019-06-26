@@ -1,5 +1,8 @@
 # Function to calculate annual cumulative page views
 
+library(plyr)
+library(ggplot2)
+
 #==================================================================================================
 
 cumulativePlot <- function(cdi_df){
